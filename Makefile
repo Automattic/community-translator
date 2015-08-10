@@ -5,14 +5,19 @@ MOCHA ?= ./node_modules/.bin/mocha
 BROWSERIFY = ./node_modules/.bin/browserify
 FLAGS = -t uglifyify
 
-all: inject.js style.css
+all: community-translator.js community-translator.min.js community-translator.css
 
-inject.js: browserify
+community-translator.js: browserify
+
+community-translator.min.js: uglifyjs
 
 browserify:
 	$(BROWSERIFY) $(FLAGS) lib/index.js --standalone communityTranslator -o community-translator.js
 
-style.css: css/custom.css
+uglifyjs:
+	uglifyjs community-translator.js -c > community-translator.min.js
+
+community-translator.css: css/custom.css
 	cat css/jquery.webui*.css css/custom.css > community-translator.css
 
 test:

@@ -5,8 +5,8 @@ It does so by providing on-screen translation ability, so that the community can
 ![Screenshot](docs/screenshot.png)
 
 ### Requirements
-- jQuery
-- The [`gp-translation-extended-api`](https://github.com/hewsut/gp-extended-api-plugins) plugin for GlotPress
+- The [GlotPress as a WordPress plugin](https://github.com/GlotPress/GlotPress-WP)
+- The [`gp-translation-extended-api`](https://github.com/david-binda/gp-extended-api-plugins) plugin for GlotPress as a WordPress plugin
 
 ### Build
 To create the `community-translator.js` and `community-translator.css` files which should be loaded in the translatable site.

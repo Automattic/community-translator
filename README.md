@@ -12,7 +12,6 @@ It does so by providing on-screen translation ability, so that the community can
 ### Build
 To create the `community-translator.js` and `community-translator.css` files which should be loaded in the translatable site.
 
-* Make sure you've got uglifyjs installed in system. If not, run `sudo npm install -g uglify-js`
 * run `npm install`
 * run `make`.
 

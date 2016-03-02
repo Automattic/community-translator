@@ -6,10 +6,16 @@ It does so by providing on-screen translation ability, so that the community can
 
 ### Requirements
 - jQuery
-- The [`gp-translation-extended-api`](https://github.com/automattic/gp-translation-extended-api) plugin for GlotPress
+- The [GlotPress as a WordPress plugin](https://github.com/GlotPress/GlotPress-WP)
+- The [`gp-translation-extended-api`](https://github.com/david-binda/gp-extended-api-plugins) plugin for GlotPress as a WordPress plugin
 
 ### Build
-To create the `community-translator.js` and `community-translator.css` files which should be loaded in the translatable site, run `make`.
+To create the `community-translator.js` and `community-translator.css` files which should be loaded in the translatable site.
+
+* Make sure you've got uglifyjs installed in system. If not, run `sudo npm install -g uglify-js`
+* run `npm install`
+* run `make`.
+
 You can also use `fswatch-run lib css make` to watch the directories `lib` and `css` for changed files and run `make` automatically.
 
 ### Loading

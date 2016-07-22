@@ -19,6 +19,7 @@
 		"chai": "^2.1.2",
 		"jsdom": "^2.0.0",
 		"mocha": "*",
+		"uglify-js": "*",
 		"uglifyify": "*"
 	},
 	"license": "GPL-2.0+",

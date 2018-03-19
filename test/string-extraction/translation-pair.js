@@ -1,12 +1,11 @@
 var assert = require( 'chai' ).assert,
 	fs = require( 'fs' ),
-	jsdom = require( 'jsdom' ),
 	Locale = require( '../../lib/locale' ),
 	Walker = require( '../../lib/walker' ),
 	TranslationPair = require( '../../lib/translation-pair' );
 
 describe( 'String Extraction', function() {
-	var $;
+
 
 	beforeEach( function( done ) {
 
@@ -14,21 +13,8 @@ describe( 'String Extraction', function() {
 			if ( err ) {
 				throw err;
 			}
-
-			jsdom.env( {
-				html: htmlFromFile,
-				scripts: [
-					'./lib/jquery-1.11.1.min.js'
-				],
-				done: function( err, window ) {
-					if ( err ) {
-						throw err;
-					}
-
-					$ = window.jQuery;
-					done();
-				}
-			} );
+			$( 'body' ).html( htmlFromFile );
+			done();
 		} );
 
 	} );
@@ -86,8 +72,7 @@ describe( 'String Extraction', function() {
 	} );
 
 	describe( 'English UK', function() {
-		var walker,
-			translationData = require( './translation-data/en-uk.js' );
+		var walker, translationData = require( './translation-data/en-uk.js' );
 		before( function( done ) {
 			TranslationPair.setTranslationData( translationData );
 			walker = new Walker( TranslationPair, $ );

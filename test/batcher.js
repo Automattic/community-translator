@@ -7,10 +7,14 @@ var betterAssert = require( 'better-assert' ),
 
 
 // Set up jQuery related global parameters
-global.document = jsdom.jsdom( '<html><head></head><body></body></html' );
-global.window = document.parentWindow;
-// It'd be nice to have a less  explicit dependancy here
-global.jQuery = require( './lib/jquery-1.11.1.min.js' );
+var dom = new jsdom.JSDOM( html, {
+	resources: 'usable',
+	runScripts: 'dangerously',
+} );
+var jquery = require( 'jquery' )( dom.window );
+global.window = dom.window;
+global.document = dom.window.document;
+global.jQuery = global.$ = jquery;
 
 // Module level vars that depend on jQuery
 var batcher = require( '../lib/batcher.js' ),

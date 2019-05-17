@@ -14,13 +14,12 @@
 	},
 	"devDependencies": {
 		"better-assert": "*",
-		"browserify": "*",
 		"chai": "^2.1.2",
 		"jquery": "^3.3.1",
 		"jsdom": "^11.6.2",
 		"mocha": "*",
-		"uglify-js": "*",
-		"uglifyify": "*"
+		"webpack": "^4.31.0",
+		"webpack-cli": "^3.3.2"
 	},
 	"license": "GPL-2.0+",
 	"scripts": {

@@ -9,7 +9,7 @@
 	"keywords": [],
 	"dependencies": {
 		"JSON2": "*",
-		"debug": "1.0.1",
+		"debug": ">=2.6.9",
 		"jed": "*"
 	},
 	"devDependencies": {
